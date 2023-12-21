@@ -8,7 +8,7 @@ from kvsqlite.sync import Client
  
 bot = telebot.TeleBot(Config.TG_BOT_TOKEN, num_threads=90, skip_pending=True, parse_mode='html')
 db = Client('data.sqlite')
-c = -1001636427761
+c = -9999999991636427761
 back = types.InlineKeyboardMarkup().add(types.InlineKeyboardButton('⦅ رجوع ⦆', callback_data='back'))
 logs = ['creator', 'member', 'administrator']
 def force(user_id, channel):
@@ -100,7 +100,7 @@ def start(message):
                 start(message)
                 return
             else:
-                dd = 100
+                dd = 999999999
                 someinfo['users'].append(join_user)
                 someinfo['coin'] = int(someinfo['coin'])  + dd
                 info = {
@@ -113,7 +113,7 @@ def start(message):
                 }
                 db.set(f'{join_user}', info)
                 db.set(f'{to_user}', someinfo)
-                bot.send_message(chat_id=to_user, text='فات شخص لرابط دعوتك، واخذت 100 أرصدة ..')
+                bot.send_message(chat_id=to_user, text='فات شخص لرابط دعوتك، واخذت 999999999 أرصدة ..')
                 start(message)
                 
         else:
